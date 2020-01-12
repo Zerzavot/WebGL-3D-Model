@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<p> </p>
+Webgl 3D Chair Model<p> </p>
+<button id = "ButtonX">Rotate X</button>
+<button id = "ButtonY">Rotate Y</button>
+<button id = "ButtonZ">Rotate Z</button>
+<button id = "ButtonT">Toggle Rotation</button>
+<button id = "ButtonC">Color</button><p> </p>
+<div>
+Change Rotation<input id="slider3" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+
+<p> </p>
+
+
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fColor;
+
+uniform vec4 ambientProduct, diffuseProduct, specularProduct;
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+uniform vec4 lightPosition;
+uniform float shininess;
+uniform vec3 eyePosition;
+
+
+void main()
+{
+    fColor = vColor;
+    gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+	
+	 
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying  vec4 fColor;
+
+void main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="chair.js"></script>
+
+
+<body>
+<canvas id="gl-canvas" width="640" height="360">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+<p> </p>
+16290114
+Fatma Zehra ORTAK
+</html>
