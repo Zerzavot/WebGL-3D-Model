@@ -4,6 +4,6 @@ WebGL 3D Chair Model
 
 Kodumuz iki kısımdan oluşmaktadır. (html ve javascript part)<br>
 Rotate x, rotate y ve rotate z olmak üzre 3 farklı eksende döndürme seçeneği vardır.<br>
-Toggle Rotation button ile döndürme durdurulabilir.
-Color button ise background rengini değiştirir.
-Change Rotation slider ise farklı açılarla x ekseninde dönme yapabilmemizi sağlar
+Toggle Rotation button ile döndürme durdurulabilir.<br>
+Color button ise background rengini değiştirir.<br>
+Change Rotation slider ise farklı açılarla x ekseninde dönme yapabilmemizi sağlar.<br>
